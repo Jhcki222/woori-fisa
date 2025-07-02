@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e0eafc;
+  padding: 40px 20px;
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* 페이드인 애니메이션 1초 적용 */
+  animation: fadeIn 1s ease-in;
+}
+
+.left-column {
+  flex: 2;
+  border-right: 1px solid #eee;
+  background: #fff;
+  /* 왼쪽 섹션은 slideInLeft 애니메이션 적용 */
+  animation: slideInLeft 1s ease;
+  padding: 40px;
+}
+
+.right-column {
+  flex: 1;
+  background: #f7fafc;
+  padding: 40px;
+  /* 오른쪽 섹션은 slideInRight 애니메이션 적용 */
+  animation: slideInRight 1s ease;
+}
+
+.photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00bfa6;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+h3,
+h4 {
+  margin-top: 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+a {
+  font-size: 12px;
+  color: #222;
+}
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+.contact {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.icon i {
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.icon i:hover {
+  transform: scale(1.2);
+  color: #00bfa6;
+}
+/* keyframes을 이용한 애니메이션 적용 */
+/* 애니메이션 이름 : fadeIn, 페이드인은 opacity를 0부터 1까지 주면 된다. */
+/* fadeOut은 반대로 opacity를 1부터 0까지 주면 된다. */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* 애니메이션 이름 : slideInLeft, 왼쪽 -50%부터 중앙까지 슬라이드하는 애니메이션 */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+/* 애니메이션 이름 : slideInRight, 오른쪽 50%부터 중앙까지 슬라이드하는 애니메이션 */
+@keyframes slideInRight {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
