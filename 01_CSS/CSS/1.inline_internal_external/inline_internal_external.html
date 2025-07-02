@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inline_internal_external</title>
+
+  <!-- <style></style> 태그, HTML 파일 내부(Internal)에 CSS 코드를 작성할 때 사용 -->
+  <style>
+    p{
+      color : crimson;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css"/> 태그, HTML 파일 외부(External)에 CSS 코드를 작성할 때 사용
+</head>
+
+<body>
+  <h1>CSS 스타일 적용 방식(CSS Styling)</h1>
+  <hr>
+  <!-- Ctrl + p : 파일명 검색 -->
+  <!-- Ctrl + b : 닫기 -->
+  <!-- 한줄 복사: Alt + Shift + ↓ -->
+  <!-- 같은 단어 중복 선택: Ctrl + D -->
+  <p style="color : blue;"> 태그에 직접(Inline) CSS 코드를 작성할 때 사용</p>
+  <p>Inline style로 적용된 CSS.</p>
+  <p class="internal">Internal style로 적용된 CSS.</p>
+  <p class="external">External style로 적용된 CSS.</p>
+</body>
+
+</html>
