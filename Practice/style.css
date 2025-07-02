@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "Pretendard Variable", sans-serif;
   background: #e0eafc;
   padding: 40px 20px;
 }
@@ -38,6 +39,17 @@ body {
   animation: slideInRight 1s ease;
 }
 
+.job b {
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+}
+/* 아이콘 hover시 1.2배로 scale-up, 색상 변화 */
+.job b:hover {
+  transition: transform 0.3s, color 0.3s;
+  transform: scale(1.02);
+  color: #00bfa6;
+}
 .photo-section {
   display: flex;
   flex-direction: column;
@@ -60,10 +72,15 @@ body {
 
 h1 {
   margin-bottom: 5px;
+  b {
+    font-size: 36px;
+    color: #8ab1f8;
+  }
 }
 
 h2 {
   color: #555;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
@@ -88,7 +105,7 @@ a {
   color: #222;
 }
 p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
   margin-bottom: 10px;
 }
@@ -116,11 +133,12 @@ ul li {
 }
 
 .icon i {
-  transition: transform 0.3s, color 0.3s;
   cursor: pointer;
 }
 
+/* 아이콘 hover시 1.2배로 scale-up, 색상 변화 */
 .icon i:hover {
+  transition: transform 0.3s, color 0.3s;
   transform: scale(1.2);
   color: #00bfa6;
 }
@@ -154,6 +172,7 @@ ul li {
   }
 }
 
+/* 미디어 쿼리를 이용해서 768px 이하일때, 컨테이너의 direction을 column으로 해서 세로로 배치 */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
