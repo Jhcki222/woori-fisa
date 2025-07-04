@@ -4,14 +4,16 @@
     "cors": "^2.8.5",
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "superagent": "^10.2.1"
   },
   "name": "woori_workspace",
   "version": "1.0.0",
   "description": "우리FIS아카데미 학습 공간입니다.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Practice/2.JavaScript/server/serverV4.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/Jhcki222/woori-fisa/issues"
   },
-  "homepage": "https://github.com/Jhcki222/woori-fisa#readme"
+  "homepage": "https://github.com/Jhcki222/woori-fisa#readme",
+  "type": "module"
 }

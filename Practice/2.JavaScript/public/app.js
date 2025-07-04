@@ -18,7 +18,7 @@ const SUPPORTED_LANGUAGES = ["ko", "en", "ja"];
  * 사용자가 입력을 멈춘 뒤 600ms 후 언어 감지 및 번역을 시작한다.
  */
 sourceTextarea.addEventListener("input", () => {
-  clearTimeout(timeoutId);
+  clearTimeout(timeoutId); // 전에 있던 모든 타이머 초기화
   timeoutId = setTimeout(handleTypingInput, 600); // 타이핑 멈춘 뒤 600ms 후 실행
 });
 

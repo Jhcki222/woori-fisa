@@ -1,5 +1,5 @@
 const express = require("express"); // 웹 서버 프레임워크
-const cors = require("cors"); // CORS(Cross-Origin Resource Sharing) 허용 미들웨어
+const cors = require("cors"); // CORS
 const dotenv = require("dotenv"); // 환경 변수(.env) 로드용 모듈
 const bodyParser = require("body-parser"); // HTTP 요청 본문(body) 파싱용 미들웨어
 const request = require("request"); // 외부 API 요청을 위한 HTTP 클라이언트
